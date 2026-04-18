@@ -1,0 +1,78 @@
+/* SECTION */
+.sectors {
+  padding: 100px 10%;
+  background: #2b1d14;
+  text-align: center;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* GRID */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* CARD */
+.sector-box {
+  text-align: left;
+  transition: 0.4s;
+}
+
+/* IMAGE */
+.sector-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* NUMBER */
+.sector-number {
+  font-size: 40px;
+  color: #d4af37;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* TITLE */
+.sector-box h3 {
+  margin-bottom: 8px;
+  color: white;
+}
+
+/* DESC */
+.sector-box p {
+  color: #959191;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* HOVER */
+.sector-box:hover {
+  transform: translateY(-10px);
+}
+
+.sector-box:hover img {
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}

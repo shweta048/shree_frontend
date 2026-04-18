@@ -1,0 +1,74 @@
+.amenities {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #2b1d14;
+  background: #2b1d14;
+}
+
+.amenities h2 {
+  font-size: 34px;
+  margin-bottom: 50px;
+  color: #f5e6c8;
+  background-color: #2b1d14;
+  position: relative;
+  display: inline-block;
+}
+/* GOLDEN UNDERLINE */
+.amenities h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  margin: 10px auto 0; /* center align */
+  border-radius: 2px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.amenity-card {
+  background: white;
+  color: #2b1d14;
+  padding: 40px;
+  border-radius: 10px;
+  transition:
+    all 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+.amenity-card h3 {
+  color: #2b1d14;
+}
+
+.amenity-card p {
+  color: #5a4a3f;
+}
+.amenity-card img {
+  transition: transform 0.4s ease;
+}
+.amenity-card:hover img {
+  transform: scale(1.05);
+}
+
+.amenity-card:hover {
+  transform: translateY(-20px) scale(1.06);
+  box-shadow: 0 10px 25px #754f24;
+}
+
+.amenity-icon {
+  font-size: 30px;
+  color: #c8a46b;
+  margin-bottom: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}

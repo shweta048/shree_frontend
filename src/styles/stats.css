@@ -1,0 +1,75 @@
+/* MAIN SECTION */
+.process {
+  margin: 60px 10%;
+  padding: 40px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #2b1d14, #1a120d);
+  border-radius: 20px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* HEADING */
+.process h2 {
+  color: white;
+  margin-bottom: 40px;
+}
+.process h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* CONTAINER (THIS IS THE MAIN FIX 🔥) */
+.process-container {
+  display: flex; /* ❗ important */
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap; /* responsive */
+}
+
+/* CARD */
+.process-card {
+  width: 220px;
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+  color: white;
+
+  text-align: center; /* center content */
+
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.process-icon {
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.process-card h4 {
+  margin-bottom: 8px;
+}
+
+/* TEXT */
+.process-card p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* HOVER */
+.process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}

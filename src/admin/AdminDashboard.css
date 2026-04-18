@@ -1,0 +1,228 @@
+/* MAIN LAYOUT */
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #2b1d14 60%, #3e2723 100%);
+  color: #f3f3f3;
+  width: 100vw;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #341e10 80%, #633c23 100%);
+  color: #fff;
+  padding: 32px 18px 24px 18px;
+  box-shadow: 2px 0 18px 0 rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.logo {
+  margin-bottom: 38px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffd700;
+  text-shadow: 0 2px 12px #00000044;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+  user-select: none;
+  border: none;
+}
+
+.sidebar ul li:hover {
+  background: #ffd70033;
+  color: #ffd700;
+  box-shadow: 0 2px 8px #00000022;
+}
+
+.sidebar ul li.active {
+  background: #ffd700;
+  color: #341e10;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #ffd70044;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  flex: 1;
+  padding: 36px 32px 32px 32px;
+  margin-left: 240px;
+  min-height: 100vh;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* DASHBOARD WRAPPER */
+
+.dashboard {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #00000018;
+  padding: 32px 28px 28px 28px;
+}
+
+/* HEADER */
+
+.dashboard-header {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-header h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin: 0;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #f3f3f3;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* GRID */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+/* CARD */
+
+.dashboard-card {
+  background: linear-gradient(135deg, #633c23 70%, #ffd70033 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 18px 22px 18px;
+  min-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1.5px solid #ffd70044;
+}
+
+/* HOVER */
+
+.dashboard-card:hover {
+  transform: translateY(-7px) scale(1.04);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28),
+    0 0 18px #ffd70088;
+  border: 2px solid #ffd700bb;
+}
+
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #ffd70044, transparent);
+  transition: 0.5s;
+}
+
+.dashboard-card:hover::before {
+  left: 100%;
+}
+
+/* TEXT */
+
+.dashboard-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffd700;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-card p {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px #00000033;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    padding: 18px 6px 18px 6px;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 18px 8px 18px 8px;
+    box-shadow: none;
+    border-radius: 0 0 18px 18px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard {
+    padding: 18px 6px 18px 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .dashboard {
+    padding: 10px 2px 10px 2px;
+  }
+  .sidebar {
+    padding: 10px 2px 10px 2px;
+  }
+}

@@ -1,0 +1,104 @@
+.about {
+  padding: 80px 10%;
+  background: #2b1d14;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.about-image img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+/* GOLDEN GLOW BACKGROUND */
+.about-image::before {
+  content: "";
+  position: absolute;
+  inset: -10px; /* little bigger glow area */
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 120, 0.9) 0%,
+    rgba(255, 180, 60, 0.7) 30%,
+    rgba(255, 140, 0, 0.4) 60%,
+    transparent 80%
+  );
+  opacity: 0;
+  z-index: 0;
+  filter: blur(45px); /* more spread */
+  transition: opacity 0.4s ease;
+}
+.about-image:hover {
+  box-shadow:
+    0 25px 70px rgba(212, 175, 55, 0.6),
+    0 0 40px rgba(255, 215, 100, 0.4);
+}
+/* HOVER EFFECT */
+.about-image:hover img {
+  transform: translateY(-15px) scale(1.08);
+}
+
+.about-image:hover::before {
+  opacity: 1;
+}
+
+.about-text h1 {
+  letter-spacing: 2px;
+  color: white;
+  text-align: left;
+  margin-bottom: 15px;
+}
+/* GOLDEN LINE */
+.about-text h1::after {
+  content: "";
+  display: block;
+  width: 70px; /* length of line */
+  height: 4px; /* thickness */
+  margin-top: 8px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #d4af37, #f5c26b, #d4af37);
+
+  border-radius: 5px;
+}
+
+.about-text h4 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.about-text p {
+  color: #959191;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.about-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

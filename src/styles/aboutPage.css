@@ -1,0 +1,139 @@
+.about-top-section {
+  position: relative;
+
+  filter: brightness(0.9);
+  width: 100%;
+  height: 100vh;
+  margin: 20px auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.about-top-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+.about-top-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* OVERLAY*/
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* TEXT */
+.about-overlay h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+}
+.about-overlay h1::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.about-overlay h1,
+.about-slogan {
+  display: block;
+}
+.about-slogan {
+  margin-top: 8px;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.about-slogan p {
+  justify-content: center;
+}
+/* CONTENT SECTION */
+.about-content {
+  width: 85%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* MAIN TEXT */
+.about-desc {
+  font-size: 20px;
+  color: #f3e5b7;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+/* GRID */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about-grid div {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* BOXES */
+.about-grid h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #d4af37;
+}
+
+.about-grid p {
+  font-size: 14px;
+  color: #f3e5b7;
+}
+/* FLEX LAYOUT */
+.about-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.about-left {
+  flex: 1;
+}
+
+/* RIGHT IMAGE */
+.about-right {
+  flex: 1;
+}
+
+.about-right img {
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+/* KEEP YOUR VERTICAL LIST */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+  }
+}

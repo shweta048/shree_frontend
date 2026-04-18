@@ -1,0 +1,200 @@
+/* ================= SECTION ================= */
+.news {
+  padding: 80px 10%;
+  text-align: center;
+  background: #2b1d14;
+}
+
+/* ================= HEADING ================= */
+.news h1 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+/* GOLD UNDERLINE */
+.news h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+
+  width: 80px;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 2px;
+}
+
+/* ================= GRID ================= */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* ================= CARD ================= */
+.news-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER */
+.news-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+/* IMAGE */
+.news-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+.news-content {
+  padding: 20px;
+  color: #2b1d14;
+}
+
+.news-content h3 {
+  color: #111;
+  font-weight: 600;
+}
+
+.news-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* BUTTON */
+.news-content button {
+  padding: 8px 18px;
+  border: none;
+  background: #2b1d14;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.news-content button:hover {
+  background: #d4af37;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* ================= MODAL ================= */
+
+/* OVERLAY */
+.news-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+/* MODAL BOX */
+.news-modal {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  max-width: 90%;
+  max-height: 85vh;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+
+  animation: fadeIn 0.3s ease;
+}
+
+/* TITLE */
+.news-modal h2 {
+  color: #111;
+  margin: 0;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 45px;
+}
+
+/* IMAGE */
+.news-modal img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.news-modal-content {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+.news-modal-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  word-wrap: break-word;
+}
+
+/* CLOSE BUTTON */
+.news-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-modal {
+    width: 90%;
+  }
+}
