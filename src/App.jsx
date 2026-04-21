@@ -3,7 +3,7 @@ import Home from "./views/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Project from "./pages/Project";
-import AdminDashboard from "./admin/Admindashboard";
+import AdminDashboard from "./admin/AdminDashboard";
 import AdminLogin from "./admin/AdminLogin";
 function App() {
   return (
