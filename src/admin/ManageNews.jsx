@@ -176,7 +176,7 @@ export default function ManageNews() {
                 src={
                   project.image
                     ? `https://shree-backend-lilac.vercel.app/uploads/${project.image}`
-                    : "/no-image.png"
+                    : ""
                 }
                 alt="project"
               />

@@ -52,12 +52,9 @@ function News() {
                 src={
                   item.image
                     ? `https://shree-backend-lilac.vercel.app/uploads/${item.image}`
-                    : "/no-image.png"
+                    : ""
                 }
                 alt="project"
-                onError={(e) => {
-                  e.target.src = "/no-image.png";
-                }}
               />
 
               <div className="news-content">
@@ -99,12 +96,9 @@ function News() {
               src={
                 selectedItem.image
                   ? `https://shree-backend-lilac.vercel.app/uploads/${selectedItem.image}`
-                  : "/no-image.png"
+                  : ""
               }
               alt="project"
-              onError={(e) => {
-                e.target.src = "/no-image.png";
-              }}
             />
 
             <div className="news-modal-content">

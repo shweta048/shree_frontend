@@ -97,12 +97,9 @@ function Project() {
                     src={
                       project.image
                         ? `https://shree-backend-lilac.vercel.app/uploads/${project.image}`
-                        : "/no-image.png"
+                        : ""
                     }
                     alt="project"
-                    onError={(e) => {
-                      e.target.src = "/no-image.png";
-                    }}
                   />
 
                   <h2>{project.title}</h2>
@@ -141,12 +138,9 @@ function Project() {
               src={
                 selectedProject.image
                   ? `https://shree-backend-lilac.vercel.app/uploads/${selectedProject.image}`
-                  : "/no-image.png"
+                  : ""
               }
               alt="project"
-              onError={(e) => {
-                e.target.src = "/no-image.png";
-              }}
             />
 
             <p>{selectedProject.description}</p>
