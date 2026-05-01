@@ -15,7 +15,7 @@ function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* Quick Links 
         <div className="footer-section">
           <h3>Quick Links</h3>
 
@@ -26,7 +26,7 @@ function Footer() {
             <li>Gallery</li>
             <li>Contact</li>
           </ul>
-        </div>
+        </div>*/}
 
         {/* Contact Info */}
         <div className="footer-section">
