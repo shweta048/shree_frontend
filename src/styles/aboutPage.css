@@ -136,4 +136,38 @@
   .about-flex {
     flex-direction: column;
   }
+
+  .about-top-section {
+    height: auto;
+    min-height: 60vh;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .about-overlay h1 {
+    font-size: 32px;
+  }
+
+  .about-slogan {
+    font-size: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    width: 95%;
+    margin: 24px auto;
+    padding: 24px;
+  }
+
+  .about-desc {
+    font-size: 16px;
+  }
+
+  .about-right img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 20px;
+  }
 }

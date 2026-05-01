@@ -11,9 +11,7 @@ export default function ManageContact() {
   // Fetch contacts
   const fetchContacts = async () => {
     try {
-      const res = await fetch(
-        "https://shree-backend-lilac.vercel.app/api/contact",
-      );
+      const res = await fetch("http://localhost:5000/api/contact");
       const data = await res.json();
       setContacts(data);
     } catch (error) {
@@ -28,7 +26,7 @@ export default function ManageContact() {
   // Delete contact
   const deleteContact = async (id) => {
     if (window.confirm("Are you sure you want to delete this contact?")) {
-      await fetch(`https://shree-backend-lilac.vercel.app/api/contact/${id}`, {
+      await fetch(`http://localhost:5000/api/contact/${id}`, {
         method: "DELETE",
       });
       fetchContacts();
@@ -61,7 +59,7 @@ export default function ManageContact() {
 
   // Save updated contact
   const saveEdit = async (id) => {
-    await fetch(`https://shree-backend-lilac.vercel.app/api/contact/${id}`, {
+    await fetch(`http://localhost:5000/api/contact/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(editData),
@@ -79,7 +77,7 @@ export default function ManageContact() {
       prev.map((c) => (c._id === id ? { ...c, status: newStatus } : c)),
     );
     // Then update backend
-    await fetch(`https://shree-backend-lilac.vercel.app/api/contact/${id}`, {
+    await fetch(`http://localhost:5000/api/contact/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status: newStatus }),

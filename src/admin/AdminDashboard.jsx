@@ -22,17 +22,18 @@ export default function AdminDashboard() {
 
   const fetchCounts = async () => {
     try {
-      const [contactRes, newsRes, projectRes] = await Promise.all([
+      const [contactRes, newsRes, projectRes, siteRes] = await Promise.all([
         api.get("/contact"),
         api.get("/news"),
         api.get("/projects"),
+        api.get("/site-projects"),
       ]);
 
       setCounts({
         contacts: contactRes.data.length,
         news: newsRes.data.length,
         projects: projectRes.data.length,
-        site: 5,
+        site: siteRes.data.length,
         construction: 6,
       });
     } catch (error) {

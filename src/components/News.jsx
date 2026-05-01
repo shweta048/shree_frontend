@@ -51,7 +51,7 @@ function News() {
               <img
                 src={
                   item.image
-                    ? `https://shree-backend-lilac.vercel.app/uploads/${item.image}`
+                    ? `http://localhost:5000/uploads/${item.image}`
                     : ""
                 }
                 alt="project"
@@ -95,7 +95,7 @@ function News() {
             <img
               src={
                 selectedItem.image
-                  ? `https://shree-backend-lilac.vercel.app/uploads/${selectedItem.image}`
+                  ? `http://localhost:5000/uploads/${selectedItem.image}`
                   : ""
               }
               alt="project"

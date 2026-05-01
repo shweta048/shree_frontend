@@ -66,7 +66,7 @@ function Contact() {
           <p className="subtitle">Get in touch with us!</p>
 
           <div className="info">
-            <div className="info-item">
+            <div className="info-items">
               <FaPhoneAlt className="icon" />
               <div>
                 <p className="label">PHONE</p>
@@ -74,7 +74,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="info-item">
+            <div className="info-items">
               <FaMapMarkerAlt className="icon" />
               <div>
                 <p className="label">ADDRESS</p>
@@ -82,7 +82,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="info-item">
+            <div className="info-items">
               <FaEnvelope className="icon" />
               <div>
                 <p className="label">EMAIL</p>

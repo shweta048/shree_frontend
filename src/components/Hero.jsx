@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import "../styles/hero.css";
-import heroVideo from "../assets/videos/home-video.mp4";
+import heroImg from "../assets/images/hero-img.jpeg";
 function Hero() {
   return (
     <section id="home" className="hero" data-aos="fade-up">
       {/* VIDEO BACKGROUND */}
-      <video autoPlay loop muted playsInline className="hero-video">
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      <img src="{hero-img} " alt="hero" className="hero-image" />
       <div className="hero-overlay" data-aos="fade-right">
         <h1>
           Shree Construction <br />

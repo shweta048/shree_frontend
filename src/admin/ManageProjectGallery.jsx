@@ -182,7 +182,7 @@ export default function ManageProject() {
               <img
                 src={
                   project.image
-                    ? `https://shree-backend-lilac.vercel.app/uploads/${project.image}`
+                    ? `http://localhost:5000/uploads/${project.image}`
                     : ""
                 }
                 alt="project"

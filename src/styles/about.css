@@ -100,5 +100,23 @@
   .about-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-image {
+    order: 0;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://shree-backend-lilac.vercel.app/api/site-projects";
+const API_URL = "http://localhost:5000/api/site-projects";
 
 export const getProjects = async () => {
   const res = await axios.get(API_URL);

@@ -113,6 +113,24 @@
   .features-container {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .features-left,
+  .features-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .features-right {
+    order: 0;
+  }
+
+  .features-right img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .feature-item {

@@ -96,7 +96,7 @@ function Project() {
                   <img
                     src={
                       project.image
-                        ? `https://shree-backend-lilac.vercel.app/uploads/${project.image}`
+                        ? `http://localhost:5000/uploads/${project.image}`
                         : ""
                     }
                     alt="project"
@@ -137,7 +137,7 @@ function Project() {
             <img
               src={
                 selectedProject.image
-                  ? `https://shree-backend-lilac.vercel.app/uploads/${selectedProject.image}`
+                  ? `http://localhost:5000/uploads/${selectedProject.image}`
                   : ""
               }
               alt="project"

@@ -33,7 +33,7 @@
 
 /* Each stat */
 .brand-item {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(212, 175, 55, 0.08);
   color: white;
   padding: 25px;
   border-radius: 12px;
@@ -57,4 +57,44 @@
 .brand-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+}
+
+@media (max-width: 768px) {
+  .brands {
+    margin: 40px 5%;
+    padding: 30px 20px;
+  }
+
+  .brands-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands {
+    margin: 30px 3%;
+    padding: 25px 15px;
+  }
+
+  .brands-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .brand-item {
+    padding: 20px;
+  }
+
+  .brands h2 {
+    font-size: 24px;
+  }
+
+  .brand-item h3 {
+    font-size: 24px;
+  }
+
+  .brand-item p {
+    font-size: 13px;
+  }
 }

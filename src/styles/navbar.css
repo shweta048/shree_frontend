@@ -17,6 +17,7 @@
   font-size: 22px;
   font-weight: bolder;
   margin-top: 20px;
+  white-space: nowrap;
 }
 
 /* Desktop menu */

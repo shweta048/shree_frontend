@@ -366,23 +366,124 @@
 }
 
 @media (max-width: 768px) {
-  .modal {
-    width: 95%;
+  .project-hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 100px 20px 60px;
   }
+
+  .project-overlay {
+    padding: 22px 18px;
+  }
+
+  .project-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .project-overlay p {
+    font-size: 0.95rem;
+  }
+
+  .project-page {
+    padding: 40px 5%;
+  }
+
   .carousel {
-    min-height: 180px;
-    padding: 0 2px;
+    min-height: 200px;
+    padding: 0 4px;
   }
+
   .card {
-    width: 120px;
-    height: 140px;
+    width: 140px;
+    height: 170px;
   }
+
+  .card.prev {
+    transform: translateX(-140px) scale(0.85);
+  }
+
+  .card.next {
+    transform: translateX(140px) scale(0.85);
+  }
+
   .card h2 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     bottom: 10px;
   }
+
   .arrow {
     font-size: 1.1rem;
     padding: 4px 7px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card img {
+    height: auto;
+  }
+
+  .modal {
+    width: 95%;
+    max-width: 95vw;
+    padding: 18px;
+  }
+
+  .modal img {
+    height: auto;
+    max-height: 320px;
+  }
+
+  .modal-plans,
+  .modal-gallery {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal-plans img,
+  .modal-gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .project-overlay {
+    padding: 18px 14px;
+  }
+
+  .project-page {
+    padding: 30px 4%;
+  }
+
+  .carousel {
+    min-height: 170px;
+  }
+
+  .card {
+    width: 110px;
+    height: 140px;
+  }
+
+  .card.prev,
+  .card.next {
+    transform: translateX(100px) scale(0.82);
+  }
+
+  .card h2 {
+    font-size: 0.7rem;
+  }
+
+  .modal {
+    padding: 16px;
+  }
+
+  .modal p {
+    font-size: 0.95rem;
   }
 }
