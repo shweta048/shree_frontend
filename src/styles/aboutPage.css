@@ -153,8 +153,6 @@
 
   .about-overlay {
     padding: 20px;
-    justify-content: flex-start;
-    padding-top: 60px;
   }
 
   .about-overlay h1 {
@@ -193,10 +191,6 @@
 
   .about-top-section img {
     height: 40vh;
-  }
-
-  .about-overlay {
-    padding-top: 40px;
   }
 
   .about-overlay h1 {
