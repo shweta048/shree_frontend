@@ -4,7 +4,6 @@ import ManageContact from "./ManageContact";
 import ManageNews from "./ManageNews";
 import ManageProjectGallery from "./ManageProjectGallery";
 import ManageSiteProject from "./ManageSiteProject";
-//import ManageConstructionDetails from "./ManageConstructionDetails";
 import "./AdminDashboard.css";
 import api from "../services/api";
 
@@ -22,17 +21,17 @@ export default function AdminDashboard() {
 
   const fetchCounts = async () => {
     try {
-      const [contactRes, newsRes, projectRes, siteRes] = await Promise.all([
+      const [contactRes, newsRes, galleryRes, siteRes] = await Promise.all([
         api.get("/contact"),
         api.get("/news"),
-        api.get("/projects"),
+        api.get("/gallery"),
         api.get("/site-projects"),
       ]);
 
       setCounts({
         contacts: contactRes.data.length,
         news: newsRes.data.length,
-        projects: projectRes.data.length,
+        projects: galleryRes.data.length,
         site: siteRes.data.length,
         construction: 6,
       });
