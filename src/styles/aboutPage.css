@@ -139,19 +139,31 @@
 
   .about-top-section {
     height: auto;
-    min-height: 60vh;
+    min-height: 50vh;
     margin: 0;
     border-radius: 0;
+    filter: brightness(0.8);
+  }
+
+  .about-top-section img {
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-overlay {
+    padding: 20px;
   }
 
   .about-overlay h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .about-slogan {
-    font-size: 15px;
+    font-size: 14px;
     width: 90%;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .about-content {
@@ -169,5 +181,29 @@
     height: auto;
     max-height: 70vh;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-top-section {
+    min-height: 40vh;
+  }
+
+  .about-top-section img {
+    height: 40vh;
+  }
+
+  .about-overlay h1 {
+    font-size: 24px;
+  }
+
+  .about-slogan {
+    font-size: 13px;
+  }
+
+  .about-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
   }
 }
